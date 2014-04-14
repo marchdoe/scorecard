@@ -1,0 +1,263 @@
+@import 'normalize';
+
+/* Fonts
+   ========================================================================== */
+
+html, button, input, select, textarea {
+  color: #333;
+  font-family: $body;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+// http://modularscale.com/scale/?px1=21&px2=800&ra1=1.618&ra2=0
+.giga {
+  @extend %all-caps;
+  
+  @include font-size(44);
+  
+  line-height: 1.1;
+  
+  @include respond-to(small) {
+    @include font-size(90);
+  }
+}
+.mega {
+  @include font-size(44);
+  
+  @include respond-to(small) {
+    @include font-size(72);
+  }
+}
+h1,
+.alpha {
+  @include font-size(44);
+}
+h2,
+.beta {
+  @include font-size(26);
+
+  @include respond-to(small) {
+    @include font-size(33);
+  }
+}
+h3,
+.gamma {
+  @include font-size(22);
+  
+  @include respond-to(small) {
+    @include font-size(27);
+  }
+}
+h4,
+.delta {
+  @include font-size(18);
+  
+  @include respond-to(small) {
+    @include font-size(22);
+  }
+}
+h5,
+.epsilon {
+  @include font-size(16);
+  
+  @include respond-to(small) {
+    @include font-size(18);
+  }
+}
+h6,
+.zeta {
+  @include font-size(16);
+    
+  @include respond-to(small) {
+    @include font-size(18);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0 0 rem(12);
+
+  @include respond-to(small) {
+    margin-bottom: rem(16);
+  }
+}
+
+p,
+ul,
+ol,
+dl {
+  color: lighten(#333, 4%);
+  margin: 0 0 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @include respond-to(small) {
+    @include font-size(22);
+    
+    margin: 0 0 rem(33);
+  }
+}
+
+dt {
+  font-weight: 400;
+}
+
+.lead {
+  @include font-size(20);
+
+  @include respond-to(small) {
+    @include font-size(24);
+  }
+}
+
+/* Defaults
+   ========================================================================== */
+
+html {
+  background-color: #fff;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+::-moz-selection {
+  @include selection();
+}
+
+::selection {
+  @include selection();
+}
+
+figure {
+  margin-bottom: rem(33);
+
+  img {
+    display: block;
+    margin-bottom: rem(11);
+  }
+}
+
+figcaption {
+  // @include font-size(22);
+
+
+  @include respond-to(small) {
+    @include font-size(22);
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+blockquote {
+  font-style: italic;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  
+  p {
+    @include font-size(18);
+    
+    @include respond-to(small) {
+      @include font-size(24);
+    }
+  }
+  
+  .cite {
+    font-style: normal;
+    &:before {
+      content: '\2014';
+    }
+  }
+}
+
+pre {
+  margin: 0;
+}
+
+code {
+  color: #C14B3E;
+  font-family: 'Inconsolata', sans-serif;
+  
+  
+  @include respond-to(small) {
+    @include font-size(22);
+  }
+}
+
+a {
+  color: #387BA8;
+  text-decoration: none;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  &:hover {
+    color: inherit;
+  }
+}
+
+::-webkit-input-placeholder {
+   color: #ccc;
+}
+
+::-moz-placeholder {
+   color: #ccc;
+}
+
+/* Forms
+   ========================================================================== */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  line-height: 1.6;
+  resize: vertical;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+textarea {
+  @include font-size(16);
+
+  -webkit-appearance: none;
+  border: 1px solid $primary-color;
+  border-radius: 2px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #ccc;
+  outline: none;
+  padding: rem(12);
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  width: 100%;
+  &:focus {
+    border-color: darken($primary-color, 50%);
+    color: inherit;
+  }
+  @include respond-to(small) {
+    @include font-size(22);
+    
+    padding: rem(22);
+  }
+}

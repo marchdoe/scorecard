@@ -1,0 +1,56 @@
+.modal {
+  $width: 90%;
+  
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 40px rgba(#000, .5);
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease .25s, -webkit-transform .25s ease-in-out .25s;
+          transition: opacity .25s ease .25s, transform .25s ease-in-out .25s;
+  -webkit-transform: scale(.55);
+          transform: scale(.55);
+  width: $width;
+  
+  @include respond-to(small) {
+    $width: 800;
+    
+    max-width: rem($width);
+  }
+}
+
+.modal-header,
+.modal-footer {
+  padding: rem(12) rem(18);
+  position: relative;
+  
+  @include respond-to(small) {
+    padding: rem(18) rem(32);
+  }
+}
+
+.modal-header {
+  border-bottom: 1px solid $primary-color;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  height: rem(200);
+  overflow-y: auto;
+  padding: rem(12) rem(18);
+  
+  @include respond-to(small) {
+    height: rem(300);
+    padding: rem(18) rem(32);
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid $primary-color;
+}

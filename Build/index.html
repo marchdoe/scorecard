@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scorecard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <link rel='stylesheet' href='stylesheets/style.css'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic|Inconsolata">
+    
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-constrained flag">
+        <div class="table-cell">
+          <a class="menu-link btn btn--small" href="#">Menu</a>
+        </div>
+      </div>
+    </header>
+    
+    <div class="drawer">
+
+      <div class="l-constrained">
+        <div class="hero">
+          <div class="tagline h-grp">
+            <h1 class="giga">Scorecard</h1>
+            <p class="lead">experiments in golf scorecards</p>
+          </div>
+        </div>
+
+
+<!-- <section class="l-row" id="table">          
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <td data-label="Position">Position</td>
+      <td data-label="Team">Team</td>
+      <td data-label="Played">Played</td>
+      <td data-label="Points">Points</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td data-label="Position">1</td>
+      <td data-label="Team">Man Utd</td>
+      <td data-label="Played">38</td>
+      <td data-label="Points">89</td>
+    </tr>
+
+    <tr>
+      <td data-label="Position">2</td>
+      <td data-label="Team">Man City</td>
+      <td data-label="Played">38</td>
+      <td data-label="Points">78</td>
+    </tr>
+
+    <tr>
+      <td data-label="Position">3</td>
+      <td data-label="Team">Chelsea</td>
+      <td data-label="Played">38</td>
+      <td data-label="Points">75</td>
+    </tr>
+
+    <tr>
+      <td data-label="Position">4</td>
+      <td data-label="Team">Arsenal</td>
+      <td data-label="Played">38</td>
+      <td data-label="Points">73</td>
+    </tr>
+  </tbody>
+</table>
+</section> -->
+
+<section class="l-row">
+<table class="table table-responsive scorecard">             
+  <thead>                 
+    <tr>
+      <th class="first-col">                         
+        <div>&nbsp;</div>                     
+      </th>
+      
+      <th class="hole-selectable" data-hole-number="1">
+        1
+      </th>
+
+      <th class="hole-selectable" data-hole-number="2">
+        2
+      </th>
+
+      <th class="hole-selectable" data-hole-number="3">
+        3
+      </th>
+
+      <th class="hole-selectable" data-hole-number="4">
+        4
+      </th>
+
+      <th class="hole-selectable" data-hole-number="5">
+        5
+      </th>
+
+      <th class="hole-selectable" data-hole-number="6">
+        6
+      </th>
+
+      <th class="hole-selectable" data-hole-number="7">
+        7
+      </th>
+
+      <th class="hole-selectable" data-hole-number="8">
+        8
+      </th>
+
+      <th class="hole-selectable" data-hole-number="9">
+        9
+      </th>
+      
+      <th class="hole-selectable" data-hole-number="1">
+        out
+      </th>
+
+      <th class="hole-selectable" data-hole-number="1">
+        10
+      </th>
+
+      <th class="hole-selectable" data-hole-number="2">
+        11
+      </th>
+
+      <th class="hole-selectable" data-hole-number="3">
+        12
+      </th>
+
+      <th class="hole-selectable" data-hole-number="4">
+        13
+      </th>
+
+      <th class="hole-selectable" data-hole-number="5">
+        14
+      </th>
+
+      <th class="hole-selectable" data-hole-number="6">
+        15
+      </th>
+
+      <th class="hole-selectable" data-hole-number="7">
+        16
+      </th>
+
+      <th class="hole-selectable" data-hole-number="8">
+        17
+      </th>
+
+      <th class="hole-selectable" data-hole-number="9">
+        18
+      </th>
+
+      <th class="last-col">
+        in
+      </th>
+
+      <th class="last-col">
+        total
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="first-col">
+          <div>par</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>36</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>36</div>
+        </td>
+
+        <td>
+          <div>72</div>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td class="first-col">
+          <div>Player 1</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>36</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>4</div>
+        </td>
+
+        <td>
+          <div>36</div>
+        </td>
+
+        <td>
+          <div>72</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- @include _footer

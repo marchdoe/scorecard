@@ -1,0 +1,119 @@
+.nav {
+  @extend %no-bullets;
+
+  > li {
+    display: inline-block;
+  }
+  
+  a {
+    display: inline-block;
+    padding: .3em .6em;
+  }
+}
+
+nav {
+  @include respond-to(small) {
+    @include bar();
+
+    padding-top: 1.8em;
+    padding-bottom: .2em;
+  }
+}
+
+.nav--inline,
+.nav--stacked {
+  a {
+    padding: .5em .6em;
+  }
+}
+
+.nav--stacked {
+  > li {
+    display: block;
+  }
+  
+  a {
+    border-bottom: 1px solid $primary-color;
+    display: block;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+/* Custom styles for Barebones
+   ========================================================================== */
+
+.nav--cta {
+  > li {
+    margin-right: .5em;
+    margin-left: .5em;
+  }
+}
+
+.nav--primary {
+  @extend %all-caps;
+  
+  background-color: #f5f5f5;
+  border-bottom: 1px solid $primary-color;
+  margin-bottom: 0;
+  
+  > li {
+    display: block;
+    
+    @include respond-to(small) {
+      display: inline-block;
+    }
+  }
+  
+  a {
+    border-bottom: 1px solid #fff;
+    display: block;
+    padding: em(12) em(18);
+    
+    @include respond-to(small) {
+      display: inline-block;
+      padding: 0;
+    }
+  }
+  
+  @include respond-to(small) {
+    @include font-size(18);
+    
+    background-color: transparent;
+    border: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(900);
+    padding-right: rem(18);
+    padding-left: rem(18);
+    text-align: justify;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+.drawer {
+  -webkit-transform: translate3d(0, -230px, 0);
+          transform: translate3d(0, -230px, 0);
+  -webkit-transition: -webkit-transform .25s ease-out;
+          transition: transform .25s ease-out;
+  
+  @include respond-to(small) {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.is-pulled-down {
+  -webkit-transform: translate3d(0, 66px, 0);
+          transform: translate3d(0, 66px, 0);
+  
+  @include respond-to(small) {
+    -webkit-transform: none;
+            transform: none;
+  }
+}

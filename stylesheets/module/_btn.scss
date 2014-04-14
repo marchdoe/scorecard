@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Button
+   ========================================================================== */
+  
+/**
+ * Layout styles for lists.
+ *
+ * Used for list items to remove the bullets and margins. The different classes
+ * refer to the different layouts you want to use.
+ */
+   
+.btn {
+  @extend %all-caps;
+  
+  @include font-size(22);
+
+  background-color: #fff;
+  border: 1px solid darken(#f5f5f5, 4%);
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 700;
+  padding: .5em .9em;
+  &:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+  }
+}
+
+.btn--big {
+  @include font-size(24);
+  
+  padding: .75em 1em;
+}
+
+.btn--small {
+  @include font-size(18);
+  
+  padding: .35em .7em;
+}
+
+/* Custom styles for Barebones
+   ========================================================================== */
+
+.btn--alert {
+  @include btn(#c81b13);
+}
+
+.btn--success {
+  @include btn(#0fc843);
+}
+
+.btn--twitter {
+  @include btn(#00aced);
+}
+
+.btn--facebook {
+  @include btn(#3b5999);
+}

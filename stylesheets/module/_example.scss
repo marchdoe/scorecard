@@ -1,0 +1,9 @@
+.example {
+  background-color: #f5f5f5;
+  margin-bottom: em(44);
+  padding: em(16) em(19);
+  
+  @include respond-to(small) {
+    padding: em(22) em(25);
+  }
+}

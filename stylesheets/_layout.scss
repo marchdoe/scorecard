@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/**
+ * Layout styles for lists.
+ *
+ * Used for list items to remove the bullets and margins. The different classes
+ * refer to the different layouts you want to use.
+ */
+
+.l-stacked,
+.l-inline,
+.l-inline-desktop,
+.l-grid {
+  @extend %no-bullets;
+}
+
+.l-inline {
+  > li {
+    display: inline-block;
+  }
+}
+
+.l-grid {
+  @extend %clearfix;
+  
+  > li {
+    float: left;
+  }
+}
+
+/* Custom styles for Barebones
+   ========================================================================== */
+
+.l-inline-desktop {
+  > li {
+    margin-bottom: rem(4);
+
+    @include respond-to(small) {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.l-header {
+  @include bar();
+
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  
+  h1 {
+    margin: 0;
+  }
+  
+  @include respond-to(small) {
+    display: none;
+  }
+}
+
+.l-footer {
+  border-top: 1px solid $primary-color;
+  padding-top: em(33);
+  padding-bottom: em(33);
+  text-align: center;
+  
+  @include respond-to(small) {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+  }
+}
+
+.l-constrained {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(980);
+  padding-right: rem(12);
+  padding-left: rem(12);
+  
+  @include respond-to(small) {
+    padding-right: rem(18);
+    padding-left: rem(18);
+  }
+}
+
+.l-row {
+  margin-bottom: rem(50);
+  
+  @include respond-to(small) {
+    margin-bottom: rem(88);
+  }
+}
