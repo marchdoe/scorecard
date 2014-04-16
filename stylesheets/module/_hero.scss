@@ -1,6 +1,6 @@
 .hero {
-  padding-top: rem(80);
-  padding-bottom: rem(80);
+  padding-top: rem(50);
+  padding-bottom: rem(30);
   text-align: center;
   
   .giga,
@@ -10,7 +10,7 @@
   }
   
   @include respond-to(small) {
-    padding-top: rem(140 + 90);
+    padding-top: rem(50 + 30);
     padding-bottom: rem(140);
   }
 }

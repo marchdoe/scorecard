@@ -39,9 +39,10 @@ table {
 }
 
 thead {
-  @extend %all-caps;
+  // @extend %all-caps;
   
-  background-color: #f5f5f5;
+  background-color: #999;
+  color: #fff;
   display: none;
 
   @include respond-to(small) {
@@ -49,10 +50,13 @@ thead {
   }
 }
 
+th { font-weight: normal; }
+
 td {
   @include respond-to(small) {
     border: 1px solid $primary-color;
     padding: .1em;
+    text-align: center;
   }
 }
 
@@ -64,6 +68,8 @@ td {
       display: table-row;
       margin-bottom: 0;
     }
+
+    &:nth-child(odd) { background-color: #f7f7f7; }
   }
 
   td {
@@ -94,9 +100,30 @@ td {
     }
     
     @include respond-to(small) {
-      border: 1px solid $primary-color;
+      // border: 1px solid $primary-color;
+      border: 1px solid #e1e1e1;
       display: table-cell;
       padding: .1em;
     }
   }
+
+  .hole-number th { background-color: #494949;}
+  .hole-number th:first-child { border-radius: 4px 0 0 0; }
+  .hole-number th:last-child { border-radius: 0 4px 0 0; }
+
+  .tee td     { background-color: #a2a2a2; color: #f1f1f1; }
+
+
+   tr span.eagle,
+   tr span.albatross    { background-color: #2ECC40; display: block; }
+   tr span.birdie       { background-color: #2ECC40; display: block; }
+   
+   tr span.bogey        { background-color: #FF4136; display: block; }
+
+   tr span.other,
+   tr span.double-bogey,
+   tr span.triple-bogey { background-color: #FF4136; display: block; }
+
+  tr td:first-child { text-align: left; }
+
 }
