@@ -1,7 +1,0 @@
-.tagline {
-  margin-bottom: em(21, 16);
-
-  @include respond-to(small) {
-    margin-bottom: em(44, 16);
-  }
-}
