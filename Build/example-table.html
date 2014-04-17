@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scorecard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <link rel='stylesheet' href='stylesheets/example.css'>
+    
+    
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+  <body>
+
+
+<div class="container">
+  <table class="responsive-table">
+    <caption>Tournament Leaderboard</caption>
+    <thead>
+      <tr>
+        <th scope="col">Pos</th>
+        <th scope="col" class="player">Player</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col">9</th>
+        <th scope="col">out</th>
+        <th scope="col">10</th>
+        <th scope="col">11</th>
+        <th scope="col">12</th>
+        <th scope="col">13</th>
+        <th scope="col">14</th>
+        <th scope="col">15</th>
+        <th scope="col">16</th>
+        <th scope="col">17</th>
+        <th scope="col">18</th>
+        <th scope="col">in</th>
+        <th scope="col">total</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="9">Augusta National, Augusta Georgia <span>
+        March 31, 2014 | 76 with a slight wind </span></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <th data-type="player">Bubba Watson</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score">33</td>
+        <td data-title="total" data-type="score">66</td>
+      </tr>
+
+      <tr>
+        <th scope="row">T2</th>
+        <th data-type="player">Jonas Blixt</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score">33</td>
+        <td data-title="total" data-type="score">66</td>
+      </tr>
+
+      <tr>
+        <th scope="row">T2</th>
+        <th data-type="player">Jordan Spieth</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score">33</td>
+        <td data-title="total" data-type="score">66</td>
+      </tr>
+
+      <tr>
+        <th scope="row">4</th>
+        <th data-type="player">Miguel Angel Jimenez</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score">33</td>
+        <td data-title="total" data-type="score">66</td>
+      </tr>
+
+      <tr>
+        <th scope="row">5</th>
+        <th data-type="player">Rickie Fowler</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score">33</td>
+        <td data-title="total" data-type="score">66</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- @include _footer
