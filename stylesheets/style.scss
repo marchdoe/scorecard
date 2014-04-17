@@ -3,11 +3,21 @@
   'mixins',
   'normalize',
   'base',
-  'helpers',
   'layout',
   'module/hero',
-  'module/section',
   'module/table';
 
 
 
+.table.minimal.table-responsive {
+  font-size: 18px;
+  
+  tr th:first-child { text-align: left; }
+  tr:nth-child(odd) { background-color: transparent; }
+  
+  tr.score { border: 4px solid #e1e1e1; }
+
+  th { background-color: #fff; color: #494949; }
+  td { border-bottom: 1px solid #f1f1f1; padding: 3px 6px; }
+  .tee td { background-color: transparent;  color: #494949;}
+} 

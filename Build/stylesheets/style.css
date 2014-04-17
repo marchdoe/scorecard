@@ -970,34 +970,6 @@ textarea {
       font-size: 1.375rem;
       padding: 1.375rem; } }
 
-.text-center {
-  text-align: center; }
-
-.text-right {
-  text-align: right; }
-
-.text-left {
-  text-align: left; }
-
-.giga {
-  font-weight: 600;
-  text-transform: uppercase; }
-
-.l-grid:before, .l-grid:after {
-  content: "";
-  display: table; }
-.l-grid:after {
-  clear: both; }
-
-.l-stacked,
-.l-inline,
-.l-inline-desktop,
-.l-grid {
-  list-style: none;
-  margin-top: 0;
-  margin-left: 0;
-  padding-left: 0; }
-
 /* ==========================================================================
    Layout
    ========================================================================== */
@@ -1078,34 +1050,6 @@ textarea {
     .hero {
       padding-top: 5rem;
       padding-bottom: 8.75rem; } }
-
-.section:last-of-type {
-  margin-bottom: 0; }
-
-.section--main {
-  margin-bottom: 2.0625rem; }
-  @media only screen and (min-width: 35em) {
-    .section--main {
-      margin-bottom: 5.5rem; } }
-
-.section--sub {
-  margin-bottom: 1rem; }
-  @media only screen and (min-width: 35em) {
-    .section--sub {
-      margin-bottom: 2.0625rem; } }
-
-.section-header {
-  border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 2.0625rem;
-  padding-bottom: 0.25rem; }
-  @media only screen and (min-width: 35em) {
-    .section-header {
-      margin-bottom: 2.0625rem;
-      padding-bottom: 0.6875rem; } }
-
-.section-title {
-  color: #999999;
-  margin: 0; }
 
 table {
   width: 100%; }
@@ -1213,3 +1157,21 @@ th {
   display: block; }
 .table-responsive tr td:first-child {
   text-align: left; }
+
+.table.minimal.table-responsive {
+  font-size: 18px; }
+  .table.minimal.table-responsive tr th:first-child {
+    text-align: left; }
+  .table.minimal.table-responsive tr:nth-child(odd) {
+    background-color: transparent; }
+  .table.minimal.table-responsive tr.score {
+    border: 4px solid #e1e1e1; }
+  .table.minimal.table-responsive th {
+    background-color: #fff;
+    color: #494949; }
+  .table.minimal.table-responsive td {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 3px 6px; }
+  .table.minimal.table-responsive .tee td {
+    background-color: transparent;
+    color: #494949; }
