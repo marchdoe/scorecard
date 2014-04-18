@@ -497,6 +497,12 @@ a {
 .responsive-table {
   width: 100%;
   margin-bottom: 1.5em; }
+  .responsive-table .out,
+  .responsive-table .in {
+    background-color: #f1f1f1; }
+  .responsive-table .total {
+    font-size: 22px;
+    font-weight: bold; }
   @media (min-width: 48em) {
     .responsive-table {
       font-size: .9em; } }
@@ -521,13 +527,14 @@ a {
         width: auto;
         overflow: auto; } }
     .responsive-table thead th {
-      background-color: #aaaaaa;
-      border: 1px solid #aaaaaa;
+      border: 1px solid #e1e1e1;
       font-weight: normal;
       text-align: center;
-      color: white; }
-      .responsive-table thead th:first-of-type, .responsive-table thead th.player {
-        text-align: left; }
+      font-size: 11px; }
+      .responsive-table thead th:first-of-type {
+        border: none; }
+      .responsive-table thead th.player {
+        border: none; }
   .responsive-table tbody,
   .responsive-table tr,
   .responsive-table th,
@@ -552,15 +559,7 @@ a {
       .responsive-table th,
       .responsive-table td {
         display: table-cell;
-        padding: .5em; } }
-    @media (min-width: 62em) {
-      .responsive-table th,
-      .responsive-table td {
-        padding: .75em .5em; } }
-    @media (min-width: 75em) {
-      .responsive-table th,
-      .responsive-table td {
-        padding: .75em; } }
+        padding: .4em; } }
   .responsive-table caption {
     margin-bottom: 1em;
     font-size: 1em;
@@ -570,8 +569,7 @@ a {
       .responsive-table caption {
         font-size: 1.5em; } }
   .responsive-table tfoot {
-    font-size: .8em;
-    font-style: italic; }
+    font-size: .8em; }
     @media (min-width: 62em) {
       .responsive-table tfoot {
         font-size: .9em; } }
@@ -587,9 +585,6 @@ a {
         border-width: 1px; } }
     .responsive-table tbody tr:last-of-type {
       margin-bottom: 0; }
-    @media (min-width: 48em) {
-      .responsive-table tbody tr:nth-of-type(even) {
-        background-color: #f1f1f1; } }
   .responsive-table tbody th[scope="row"] {
     background-color: #aaaaaa;
     color: white; }
@@ -597,15 +592,43 @@ a {
       .responsive-table tbody th[scope="row"] {
         background-color: transparent;
         color: #5e5d52;
-        text-align: left; } }
+        text-align: center;
+        font-size: 12px;
+        border-right: 1px solid #e1e1e1;
+        padding: 0; } }
   .responsive-table tbody td {
-    text-align: right; }
+    text-align: center;
+    border: 1px solid #e1e1e1; }
+    .responsive-table tbody td span {
+      vertical-align: middle;
+      display: block;
+      padding: 3px 7px; }
+    .responsive-table tbody td span.eagle,
+    .responsive-table tbody td span.albatross {
+      border: 1px solid #2ecc40;
+      border-radius: 500px; }
+    .responsive-table tbody td span.birdie {
+      vertical-align: middle;
+      color: #fff;
+      background: #2ecc40;
+      border-radius: 500px; }
+    .responsive-table tbody td span.bogey {
+      background-color: #ff4136;
+      color: #fff;
+      border-radius: 3px; }
+    .responsive-table tbody td span.other,
+    .responsive-table tbody td span.double-bogey,
+    .responsive-table tbody td span.triple-bogey {
+      border: 1px solid #ff4136;
+      border-radius: 3px; }
     @media (min-width: 30em) {
       .responsive-table tbody td {
         border-bottom: 1px solid #e1e1e1; } }
     @media (min-width: 48em) {
       .responsive-table tbody td {
-        text-align: center; } }
+        text-align: center;
+        width: 40px;
+        height: 40px; } }
   .responsive-table tbody td[data-type=score] {
     border-top: 1px solid #f1f1f1; }
   .responsive-table tbody td[data-title]:before {

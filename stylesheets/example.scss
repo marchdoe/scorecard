@@ -48,6 +48,11 @@ a {
 .responsive-table {
   width: 100%;
   margin-bottom: 1.5em;
+
+  .out,
+  .in  { background-color: #f1f1f1; }
+
+  .total { font-size: 22px; font-weight: bold; }
   
   @media (min-width: $bp-bart) {
     font-size: .9em; 
@@ -78,15 +83,17 @@ a {
     }
     
     th {
-      background-color: $gray;
-      border: 1px solid $gray;
+      // background-color: $gray;
+      border: 1px solid #e1e1e1;
       font-weight: normal;
       text-align: center;
-      color: white;
+      // color: white;
+      font-size: 11px;
       
-      &:first-of-type,
+      &:first-of-type { border: none; }
+      
       &.player {
-        text-align: left; 
+        border: none;
       }
     }
   }
@@ -122,15 +129,15 @@ a {
     @media (min-width: $bp-bart) {
       // Undo display: block 
       display: table-cell;
-      padding: .5em;
+      padding: .4em;
     }
     
     @media (min-width: $bp-marge) {
-      padding: .75em .5em; 
+      // padding: .75em .5em; 
     }
     
     @media (min-width: $bp-homer) {
-      padding: .75em; 
+      // padding: .75em; 
     }
   }
   
@@ -147,7 +154,6 @@ a {
   
   tfoot {
     font-size: .8em;
-    font-style: italic;
     
     @media (min-width: $bp-marge) {
       font-size: .9em;
@@ -174,11 +180,11 @@ a {
         margin-bottom: 0; 
       }
       
-      &:nth-of-type(even) {
-        @media (min-width: $bp-bart) {
-          background-color: #f1f1f1;
-        }
-      }
+      // &:nth-of-type(even) {
+      //   @media (min-width: $bp-bart) {
+      //     background-color: #f1f1f1;
+      //   }
+      // }
     }
     
     th[scope="row"] {
@@ -188,19 +194,38 @@ a {
       @media (min-width: $bp-bart) {
         background-color: transparent;
         color: rgba(94,93,82,1);
-        text-align: left;
+        text-align: center;
+        font-size: 12px;
+        border-right: 1px solid #e1e1e1;
+        padding: 0;
       }
     }
     
     td {
-      text-align: right;
+      text-align: center;
+      border: 1px solid #e1e1e1;
+      //font-size: 14px;
+
+      span              { vertical-align: middle; display: block; padding: 3px 7px; }
+      span.eagle,
+      span.albatross    { border: 1px solid $green; border-radius: 500px; }
       
+      span.birdie       { vertical-align: middle; color: #fff; background: $green; border-radius: 500px; }
+   
+      span.bogey        { background-color: $red; color: #fff; border-radius: 3px;}
+
+      span.other,
+      span.double-bogey,
+      span.triple-bogey { border: 1px solid $red; border-radius: 3px; }
+
+
       @media (min-width: $bp-lisa) {
         border-bottom: 1px solid #e1e1e1;
       }
       
       @media (min-width: $bp-bart) {
-        text-align: center; 
+        text-align: center;
+        width: 40px; height: 40px; 
       }
     }
     
