@@ -1,4 +1,4 @@
-vanilla
+Scorecard
 =======
 
-the starting point of every new project
+
