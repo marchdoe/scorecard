@@ -561,13 +561,18 @@ a {
         display: table-cell;
         padding: .4em; } }
   .responsive-table caption {
-    margin-bottom: 1em;
+    margin-bottom: -37px;
+    margin-left: 5px;
     font-size: 1em;
     font-weight: bold;
     text-align: left; }
     @media (min-width: 48em) {
       .responsive-table caption {
-        font-size: 1.5em; } }
+        font-size: 1.2em; } }
+    .responsive-table caption span {
+      font-size: 12px;
+      font-weight: normal;
+      display: block; }
   .responsive-table tfoot {
     font-size: .8em; }
     @media (min-width: 62em) {

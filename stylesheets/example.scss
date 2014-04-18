@@ -142,14 +142,17 @@ a {
   }
   
   caption {
-    margin-bottom: 1em;
+    margin-bottom: -37px;
+    margin-left: 5px;
     font-size: 1em;
     font-weight: bold;
     text-align: left;
     
     @media (min-width: $bp-bart) {
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
+
+    span { font-size: 12px; font-weight: normal; display: block; }
   }
   
   tfoot {
