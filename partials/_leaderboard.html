@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Scorecard</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-
-    <link rel='stylesheet' href='stylesheets/example.css'>
-    
-    
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
-  </head>
-  <body>
-
-<div class="container">
-  
-  <table class="responsive-table leaderboard">
+<table class="responsive-table leaderboard">
   <caption><span>The Brendan</span> Tournament Leaderboard</caption>
   <thead>
     <tr>
@@ -229,7 +191,3 @@
       </tr>
     </tbody>
   </table>
-
-</div>
-
-<!-- @include _footer

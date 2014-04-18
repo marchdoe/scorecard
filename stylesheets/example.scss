@@ -47,7 +47,7 @@ a {
 
 .responsive-table {
   width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 5em;
 
   .out,
   .in  { background-color: #f1f1f1; }
@@ -142,8 +142,7 @@ a {
   }
   
   caption {
-    margin-bottom: -37px;
-    margin-left: 5px;
+    margin-bottom: -14px;
     font-size: 1em;
     font-weight: bold;
     text-align: left;
@@ -154,6 +153,10 @@ a {
 
     span { font-size: 12px; font-weight: normal; display: block; }
   }
+
+  &.leaderboard caption { 
+    margin-bottom: -37px;
+    margin-left: 5px; }
   
   tfoot {
     font-size: .8em;

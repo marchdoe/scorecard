@@ -496,7 +496,7 @@ a {
 
 .responsive-table {
   width: 100%;
-  margin-bottom: 1.5em; }
+  margin-bottom: 5em; }
   .responsive-table .out,
   .responsive-table .in {
     background-color: #f1f1f1; }
@@ -561,8 +561,7 @@ a {
         display: table-cell;
         padding: .4em; } }
   .responsive-table caption {
-    margin-bottom: -37px;
-    margin-left: 5px;
+    margin-bottom: -14px;
     font-size: 1em;
     font-weight: bold;
     text-align: left; }
@@ -573,6 +572,9 @@ a {
       font-size: 12px;
       font-weight: normal;
       display: block; }
+  .responsive-table.leaderboard caption {
+    margin-bottom: -37px;
+    margin-left: 5px; }
   .responsive-table tfoot {
     font-size: .8em; }
     @media (min-width: 62em) {

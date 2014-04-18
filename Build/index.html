@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
-    <link rel='stylesheet' href='stylesheets/style.css'>
+    <link rel='stylesheet' href='stylesheets/example.css'>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic|Inconsolata">
     
     
@@ -34,41 +34,53 @@
       
   </head>
   <body>
-    <div class="drawer">
+    <div class="container">
 
       <div class="l-constrained">
-        <div class="hero">
+<!--         <div class="hero">
           <div class="tagline h-grp">
             <h1 class="giga">Scorecard</h1>
             <p class="lead">experiments in golf scorecards</p>
           </div>
-        </div>
+        </div> -->
 
 
-<section class="l-row">
-
-  <h1>Single Player View</h1>
-
-  <table id="out" class="table table-responsive scorecard">
+  <table class="responsive-table scorecard">
+    <caption>Doug March</caption>
     <thead>
       <tr class="hole-number">
-        <th>Hole</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>Out</th>
+        <th scope="col"></th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col">9</th>
+        
+        <th scope="col">Out</th>
+
+        <th scope="col">10</th>
+        <th scope="col">11</th>
+        <th scope="col">12</th>
+        <th scope="col">13</th>
+        <th scope="col">14</th>
+        <th scope="col">15</th>
+        <th scope="col">16</th>
+        <th scope="col">17</th>
+        <th scope="col">18</th>
+        
+        <th scope="col">In</th>
+
+        <th scope="col">Total</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr class="tee">
-        <td>Professional</td>
+      <tr>
+        <th data-type="player">Professional Tees</th>
         <td>390</td>
         <td>143</td>
         <td>535</td>
@@ -79,10 +91,23 @@
         <td>223</td>
         <td>448</td>
         <td>3593</td>
+
+        <td>346</td>
+        <td>169</td>
+        <td>525</td>
+        <td>429</td>
+        <td>193</td>
+        <td>447</td>
+        <td>407</td>
+        <td>485</td>
+        <td>442</td>
+        <td>3443</td>
+
+        <td>7036</td>
       </tr>
 
-      <tr class="hcp">
-        <td>Handicap</td>
+      <tr>
+        <th data-type="player">Handicap</th>
         <td>15</td>
         <td>17</td>
         <td>7</td>
@@ -93,10 +118,23 @@
         <td>13</td>
         <td>9</td>
         <td>&nbsp;</td>
+
+        <td>16</td>
+        <td>14</td>
+        <td>8</td>
+        <td>6</td>
+        <td>18</td>
+        <td>2</td>
+        <td>4</td>
+        <td>10</td>
+        <td>12</td>
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
       </tr>
 
-      <tr class="par">
-        <td>Par</td>
+      <tr>
+        <th data-type="player">Par</th>
         <td>4</td>
         <td>3</td>
         <td>5</td>
@@ -107,10 +145,23 @@
         <td>3</td>
         <td>4</td>
         <td>36</td>
+
+        <td>4</td>
+        <td>3</td>
+        <td>5</td>
+        <td>4</td>
+        <td>3</td>
+        <td>4</td>
+        <td>4</td>
+        <td>5</td>
+        <td>4</td>
+        <td>36</td>
+
+        <td>72</td>
       </tr>
 
-      <tr class="score">
-        <td>Score</td>
+      <tr>
+        <th data-type="player">Score</th>
         <td>
           <span class="par">4</span>
         </td>
@@ -139,73 +190,7 @@
           <span class="bogey">5</span>
         </td>
         <td>39</td>
-      </tr>
 
-    </tbody>
-  </table>
-
-  <table id="in" class="table table-responsive scorecard" style="margin-top: 20px;">
-    <thead>
-      <tr class="hole-number">
-        <th>Hole</th>
-        <th>10</th>
-        <th>11</th>
-        <th>12</th>
-        <th>13</th>
-        <th>14</th>
-        <th>15</th>
-        <th>16</th>
-        <th>17</th>
-        <th>18</th>
-        <th>In</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr class="tee">
-        <td>Professional</td>
-        <td>346</td>
-        <td>169</td>
-        <td>525</td>
-        <td>429</td>
-        <td>193</td>
-        <td>447</td>
-        <td>407</td>
-        <td>485</td>
-        <td>442</td>
-        <td>3443</td>
-      </tr>
-
-      <tr class="hcp">
-        <td>Handicap</td>
-        <td>16</td>
-        <td>14</td>
-        <td>8</td>
-        <td>6</td>
-        <td>18</td>
-        <td>2</td>
-        <td>4</td>
-        <td>10</td>
-        <td>12</td>
-        <td>&nbsp;</td>
-      </tr>
-
-      <tr class="par">
-        <td>Par</td>
-        <td>4</td>
-        <td>3</td>
-        <td>5</td>
-        <td>4</td>
-        <td>3</td>
-        <td>4</td>
-        <td>4</td>
-        <td>5</td>
-        <td>4</td>
-        <td>36</td>
-      </tr>
-
-      <tr class="score">
-        <td>Score</td>
         <td>
           <span class="par">4</span>
         </td>
@@ -234,77 +219,80 @@
           <span class="par">4</span>
         </td>
         <td>38</td>
+
+        <td>77</td>
       </tr>
 
     </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="9"><strong>Augusta National, Augusta Georgia </strong>
+          — March 31, 2014 — 76 with a slight wind</td>
+      </tr>
+    </tfoot>
   </table>
-</section>
-<section class="l-row">
-
-  <h1>Single Player View <small>Minimal</small></h1>
-
-  <table id="out" class="table table-responsive scorecard minimal">
+  <table class="responsive-table scorecard">
+    <caption></caption>
     <thead>
       <tr class="hole-number">
-        <th>Hole</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>Out</th>
+        <th scope="col"></th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+        <th scope="col">6</th>
+        <th scope="col">7</th>
+        <th scope="col">8</th>
+        <th scope="col">9</th>
+        
+        <th scope="col">Out</th>
+
+        <th scope="col">10</th>
+        <th scope="col">11</th>
+        <th scope="col">12</th>
+        <th scope="col">13</th>
+        <th scope="col">14</th>
+        <th scope="col">15</th>
+        <th scope="col">16</th>
+        <th scope="col">17</th>
+        <th scope="col">18</th>
+        
+        <th scope="col">In</th>
+
+        <th scope="col">Total</th>
+      </tr>
+
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">3</th>
+        <th scope="col"style="background-color: #f1f1f1;">5</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">5</th>
+        <th scope="col"style="background-color: #f1f1f1;">3</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;" class="out">36</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">3</th>
+        <th scope="col"style="background-color: #f1f1f1;">5</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">3</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;">5</th>
+        <th scope="col"style="background-color: #f1f1f1;">4</th>
+        <th scope="col"style="background-color: #f1f1f1;" class="in">36</th>
+        <th scope="col"style="background-color: #f1f1f1;">72</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr class="tee">
-        <td>Professional</td>
-        <td>390</td>
-        <td>143</td>
-        <td>535</td>
-        <td>405</td>
-        <td>483</td>
-        <td>463</td>
-        <td>503</td>
-        <td>223</td>
-        <td>448</td>
-        <td>3593</td>
-      </tr>
-
-      <tr class="hcp">
-        <td>Handicap</td>
-        <td>15</td>
-        <td>17</td>
-        <td>7</td>
-        <td>5</td>
-        <td>3</td>
-        <td>1</td>
-        <td>11</td>
-        <td>13</td>
-        <td>9</td>
-        <td>&nbsp;</td>
-      </tr>
-
-      <tr class="par">
-        <td>Par</td>
-        <td>4</td>
-        <td>3</td>
-        <td>5</td>
-        <td>4</td>
-        <td>4</td>
-        <td>4</td>
-        <td>5</td>
-        <td>3</td>
-        <td>4</td>
-        <td>36</td>
-      </tr>
-
-      <tr class="score">
-        <td>Score</td>
+      <tr>
+        <th data-type="player">Doug March</th>
         <td>
           <span class="par">4</span>
         </td>
@@ -333,73 +321,7 @@
           <span class="bogey">5</span>
         </td>
         <td>39</td>
-      </tr>
 
-    </tbody>
-  </table>
-
-  <table id="in" class="table table-responsive scorecard minimal" style="margin-top: 20px;">
-    <thead>
-      <tr class="hole-number">
-        <th>Hole</th>
-        <th>10</th>
-        <th>11</th>
-        <th>12</th>
-        <th>13</th>
-        <th>14</th>
-        <th>15</th>
-        <th>16</th>
-        <th>17</th>
-        <th>18</th>
-        <th>In</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr class="tee">
-        <td>Professional</td>
-        <td>346</td>
-        <td>169</td>
-        <td>525</td>
-        <td>429</td>
-        <td>193</td>
-        <td>447</td>
-        <td>407</td>
-        <td>485</td>
-        <td>442</td>
-        <td>3443</td>
-      </tr>
-
-      <tr class="hcp">
-        <td>Handicap</td>
-        <td>16</td>
-        <td>14</td>
-        <td>8</td>
-        <td>6</td>
-        <td>18</td>
-        <td>2</td>
-        <td>4</td>
-        <td>10</td>
-        <td>12</td>
-        <td>&nbsp;</td>
-      </tr>
-
-      <tr class="par">
-        <td>Par</td>
-        <td>4</td>
-        <td>3</td>
-        <td>5</td>
-        <td>4</td>
-        <td>3</td>
-        <td>4</td>
-        <td>4</td>
-        <td>5</td>
-        <td>4</td>
-        <td>36</td>
-      </tr>
-
-      <tr class="score">
-        <td>Score</td>
         <td>
           <span class="par">4</span>
         </td>
@@ -428,468 +350,214 @@
           <span class="par">4</span>
         </td>
         <td>38</td>
+
+        <td>77</td>
       </tr>
 
     </tbody>
-  </table>
-</section>
 
-<section class="l-row">
-
-  <h1>Single Player View <small>with stats</small></h1>
-
-  <table id="out" class="table table-responsive scorecard">
-    <thead>
-      <tr class="hole-number">
-        <th>Hole</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>Out</th>
+    <tfoot>
+      <tr>
+        <td colspan="9"><strong>Augusta National, Augusta Georgia </strong>
+          — March 31, 2014 — 76 with a slight wind</td>
       </tr>
-    </thead>
+    </tfoot>
+  </table>
+<!-- #@include _single_player_view_with_stats -->
 
+<table class="responsive-table leaderboard">
+  <caption><span>The Brendan</span> Tournament Leaderboard</caption>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col" class="player"></th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+      <th scope="col">5</th>
+      <th scope="col">6</th>
+      <th scope="col">7</th>
+      <th scope="col">8</th>
+      <th scope="col">9</th>
+      <th scope="col" class="out">OUT</th>
+      <th scope="col">10</th>
+      <th scope="col">11</th>
+      <th scope="col">12</th>
+      <th scope="col">13</th>
+      <th scope="col">14</th>
+      <th scope="col">15</th>
+      <th scope="col">16</th>
+      <th scope="col">17</th>
+      <th scope="col">18</th>
+      <th scope="col" class="in">IN</th>
+      <th scope="col">TOTAL</th>
+    </tr>
+
+    <tr>
+      <th scope="col"></th>
+      <th scope="col" class="player"></th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">5</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">3</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">3</th>
+      <th scope="col"style="background-color: #f1f1f1;">5</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;" class="out">36</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">3</th>
+      <th scope="col"style="background-color: #f1f1f1;">5</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">5</th>
+      <th scope="col"style="background-color: #f1f1f1;">3</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;">4</th>
+      <th scope="col"style="background-color: #f1f1f1;" class="in">36</th>
+      <th scope="col"style="background-color: #f1f1f1;">72</th>
+    </tr>
+  </thead>
+    <tfoot>
+      <tr>
+        <td colspan="9"><strong>Augusta National, Augusta Georgia </strong>
+          — March 31, 2014 — 76 with a slight wind</td>
+      </tr>
+    </tfoot>
     <tbody>
-      <tr class="tee">
-        <td>Professional</td>
-        <td>390</td>
-        <td>143</td>
-        <td>535</td>
-        <td>405</td>
-        <td>483</td>
-        <td>463</td>
-        <td>503</td>
-        <td>223</td>
-        <td>448</td>
-        <td>3593</td>
-      </tr>
-
-      <tr class="hcp">
-        <td>Handicap</td>
-        <td>15</td>
-        <td>17</td>
-        <td>7</td>
-        <td>5</td>
-        <td>3</td>
-        <td>1</td>
-        <td>11</td>
-        <td>13</td>
-        <td>9</td>
-        <td>&nbsp;</td>
-      </tr>
-
-      <tr class="par">
-        <td>Par</td>
-        <td>4</td>
-        <td>3</td>
-        <td>5</td>
-        <td>4</td>
-        <td>4</td>
-        <td>4</td>
-        <td>5</td>
-        <td>3</td>
-        <td>4</td>
-        <td>36</td>
-      </tr>
-
-      <tr class="score">
-        <td>Score</td>
-        <td>
-          <span class="par">4</span>
-        </td>
-        <td>
-          <span class="par">3</span>
-        </td>
-        <td>
-          <span class="par">5</span>
-        </td>
-        <td>
-          <span class="par">4</span>
-        </td>
-        <td>
-          <span class="par">4</span>
-        </td>
-        <td>
-          <span class="par">4</span>
-        </td>
-        <td>
-          <span class="par">5</span>
-        </td>
-        <td>
-          <span class="double-bogey">5</span>
-        </td>
-        <td>
-          <span class="bogey">5</span>
-        </td>
-        <td>39</td>
+      <tr>
+        <th scope="row">1</th>
+        <th data-type="player">Bubba Watson</th>
+        <td data-title="1" data-type="score"><span>4</span></td>
+        <td data-title="2" data-type="score"><span class="birdie">4</span></td>
+        <td data-title="3" data-type="score"><span>4</span></td>
+        <td data-title="4" data-type="score"><span>2</span></td>
+        <td data-title="5" data-type="score"><span class="bogey">4</span></td>
+        <td data-title="6" data-type="score"><span>5</span></td>
+        <td data-title="7" data-type="score"><span>2</span></td>
+        <td data-title="8" data-type="score"><span class="eagle">3</span></td>
+        <td data-title="9" data-type="score"><span>5</span></td>
+        <td data-title="out" data-type="score" class="out">33</td>
+        <td data-title="1" data-type="score"><span>4</span></td>
+        <td data-title="2" data-type="score"><span class="other">4</span></td>
+        <td data-title="3" data-type="score"><span>4</span></td>
+        <td data-title="4" data-type="score"><span>2</span></td>
+        <td data-title="5" data-type="score"><span>4</span></td>
+        <td data-title="6" data-type="score"><span>5</span></td>
+        <td data-title="7" data-type="score"><span>2</span></td>
+        <td data-title="8" data-type="score"><span>4</span></td>
+        <td data-title="9" data-type="score"><span>5</span></td>
+        <td data-title="in" data-type="score" class="in">33</td>
+        <td data-title="total" data-type="score" class="total">66</td>
       </tr>
 
       <tr>
-        <td>Fairway</td>
-        <td>
-          →
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          →
-        </td>
-        <td>
-          ←
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ←
-        </td>
-        <td>
-          ←
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          2 / 7
-        </td>
-      </tr>
-
-
-      <tr>
-        <td>Greens</td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ‐
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ‐
-        </td>
-        <td>
-          ‐
-        </td>
-        <td>6 / 9</td>
+        <th scope="row">T2</th>
+        <th data-type="player">Jonas Blixt</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score" class="out">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score" class="in">33</td>
+        <td data-title="total" data-type="score" class="total">66</td>
       </tr>
 
       <tr>
-        <td>Putts</td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          1
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>17</td>
+        <th scope="row">T2</th>
+        <th data-type="player">Jordan Spieth</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score" class="out">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score" class="in">33</td>
+        <td data-title="total" data-type="score" class="total">66</td>
       </tr>
 
+      <tr>
+        <th scope="row">4</th>
+        <th data-type="player">Miguel Angel Jimenez</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score" class="out">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score" class="in">33</td>
+        <td data-title="total" data-type="score" class="total">66</td>
+      </tr>
 
       <tr>
-        <td>Penalty</td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          1
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>1</td>
+        <th scope="row">5</th>
+        <th data-type="player">Rickie Fowler</th>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="out" data-type="score" class="out">33</td>
+        <td data-title="1" data-type="score">4</td>
+        <td data-title="2" data-type="score">4</td>
+        <td data-title="3" data-type="score">4</td>
+        <td data-title="4" data-type="score">2</td>
+        <td data-title="5" data-type="score">4</td>
+        <td data-title="6" data-type="score">5</td>
+        <td data-title="7" data-type="score">2</td>
+        <td data-title="8" data-type="score">4</td>
+        <td data-title="9" data-type="score">5</td>
+        <td data-title="in" data-type="score" class="in">33</td>
+        <td data-title="total" data-type="score" class="total">66</td>
       </tr>
     </tbody>
   </table>
-
-  <table id="in" class="table table-responsive scorecard" style="margin-top: 20px;">
-    <thead>
-      <tr class="hole-number">
-        <th>Hole</th>
-        <th>10</th>
-        <th>11</th>
-        <th>12</th>
-        <th>13</th>
-        <th>14</th>
-        <th>15</th>
-        <th>16</th>
-        <th>17</th>
-        <th>18</th>
-        <th>In</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr class="tee">
-        <td>Professional</td>
-        <td>346</td>
-        <td>169</td>
-        <td>525</td>
-        <td>429</td>
-        <td>193</td>
-        <td>447</td>
-        <td>407</td>
-        <td>485</td>
-        <td>442</td>
-        <td>3443</td>
-      </tr>
-
-      <tr class="hcp">
-        <td>Handicap</td>
-        <td>16</td>
-        <td>14</td>
-        <td>8</td>
-        <td>6</td>
-        <td>18</td>
-        <td>2</td>
-        <td>4</td>
-        <td>10</td>
-        <td>12</td>
-        <td>&nbsp;</td>
-      </tr>
-
-      <tr class="par">
-        <td>Par</td>
-        <td>4</td>
-        <td>3</td>
-        <td>5</td>
-        <td>4</td>
-        <td>3</td>
-        <td>4</td>
-        <td>4</td>
-        <td>5</td>
-        <td>4</td>
-        <td>36</td>
-      </tr>
-
-      <tr class="score">
-        <td>Score</td>
-        <td>
-          <span class="par">4</span>
-        </td>
-        <td>
-          <span class="par">3</span>
-        </td>
-        <td>
-          <span class="par">5</span>
-        </td>
-        <td>
-          <span class="par">4</span>
-        </td>
-        <td>
-          <span class="bogey">4</span>
-        </td>
-        <td>
-          <span class="bogey">5</span>
-        </td>
-        <td>
-          <span class="bogey">5</span>
-        </td>
-        <td>
-          <span class="birdie">4</span>
-        </td>
-        <td>
-          <span class="par">4</span>
-        </td>
-        <td>38</td>
-      </tr>
-
-      <tr>
-        <td>Fairway</td>
-        <td>
-          ←
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          →
-        </td>
-        <td>
-          →
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          →
-        </td>
-        <td>
-          ←
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ←
-        </td>
-        <td>
-          1 / 7
-        </td>
-      </tr>
-
-
-      <tr>
-        <td>Greens</td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ‐
-        </td>
-        <td>
-          ‐
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>
-          ✓
-        </td>
-        <td>7 / 9</td>
-      </tr>
-
-      <tr>
-        <td>Putts</td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          3
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          1
-        </td>
-        <td>
-          2
-        </td>
-        <td>18</td>
-      </tr>
-
-
-      <tr>
-        <td>Penalty</td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          1
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>1</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
 
 
 
