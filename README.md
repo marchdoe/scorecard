@@ -1,7 +1,4 @@
-scorecard
-=========
+vanilla
+=======
 
-experiments in golf scorecards
-
-
-#### built with hammerformac.com
+the starting point of every new project

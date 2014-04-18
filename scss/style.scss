@@ -1,0 +1,259 @@
+@import 'bourbon/bourbon';
+@import 'normalize';
+@import 'colors';
+
+// Breakpoints
+$bp-maggie: 15em; 
+$bp-lisa:   30em;
+$bp-bart:   48em;
+$bp-marge:  62em;
+$bp-homer:  75em;
+
+// Styles
+* {
+ @include box-sizing(border-box);
+ 
+ &:before,
+ &:after {
+   @include box-sizing(border-box);
+ }
+}
+
+body {
+  font-family: $helvetica;
+  color: rgba(94,93,82,1);
+}
+
+a {
+  color: rgba(51,122,168,1);
+  
+  &:hover,
+  &:focus {
+    color: rgba(75,138,178,1); 
+  }
+}
+
+.container {
+  margin: 5% 3%;
+  
+  @media (min-width: $bp-bart) {
+    margin: 2%; 
+  }
+  
+  @media (min-width: $bp-homer) {
+    margin: 2em auto;
+    max-width: $bp-homer;
+  }
+}
+
+.responsive-table {
+  width: 100%;
+  margin-bottom: 5em;
+
+  .out,
+  .in  { background-color: #f1f1f1; }
+
+  .total { font-size: 22px; font-weight: bold; }
+  
+  @media (min-width: $bp-bart) {
+    font-size: .9em; 
+  }
+  
+  @media (min-width: $bp-marge) {
+    font-size: 1em; 
+  }
+  
+  thead {
+    // Accessibly hide <thead> on narrow viewports
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
+    
+    @media (min-width: $bp-bart) {
+      // Unhide <thead> on wide viewports
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+    
+    th {
+      // background-color: $gray;
+      border: 1px solid #e1e1e1;
+      font-weight: normal;
+      text-align: center;
+      // color: white;
+      font-size: 11px;
+      
+      &:first-of-type { border: none; }
+      
+      &.player {
+        border: none;
+      }
+    }
+  }
+  
+  // Set these items to display: block for narrow viewports
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+    font-weight: normal;
+  }
+  
+  tr {   
+    @media (min-width: $bp-bart) {
+      // Undo display: block 
+      display: table-row; 
+    }
+  }
+  
+  th,
+  td {
+    padding: .5em;
+    vertical-align: middle;
+    
+    @media (min-width: $bp-lisa) {
+      padding: .75em .5em; 
+    }
+    
+    @media (min-width: $bp-bart) {
+      // Undo display: block 
+      display: table-cell;
+      padding: .4em;
+    }
+    
+    @media (min-width: $bp-marge) {
+      // padding: .75em .5em; 
+    }
+    
+    @media (min-width: $bp-homer) {
+      // padding: .75em; 
+    }
+  }
+  
+  caption {
+    margin-bottom: -14px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    
+    @media (min-width: $bp-bart) {
+      font-size: 1.2em;
+    }
+
+    span { font-size: 12px; font-weight: normal; display: block; }
+  }
+
+  &.leaderboard caption { 
+    margin-bottom: -37px;
+    margin-left: 5px; }
+  
+  tfoot {
+    font-size: .8em;
+    
+    @media (min-width: $bp-marge) {
+      font-size: .9em;
+    }
+  }
+  
+  tbody {
+    @media (min-width: $bp-bart) {
+      // Undo display: block 
+      display: table-row-group; 
+    }
+    
+    tr {
+      margin-bottom: 1em;
+      border: 1px solid $silver;
+      
+      @media (min-width: $bp-bart) {
+        // Undo display: block 
+        display: table-row;
+        border-width: 1px;
+      }
+      
+      &:last-of-type {
+        margin-bottom: 0; 
+      }
+      
+      // &:nth-of-type(even) {
+      //   @media (min-width: $bp-bart) {
+      //     background-color: #f1f1f1;
+      //   }
+      // }
+    }
+    
+    th[scope="row"] {
+      background-color: $gray;
+      color: white;
+      
+      @media (min-width: $bp-bart) {
+        background-color: transparent;
+        color: rgba(94,93,82,1);
+        text-align: center;
+        font-size: 12px;
+        border-right: 1px solid #e1e1e1;
+        padding: 0;
+      }
+    }
+    
+    td {
+      text-align: center;
+      border: 1px solid #e1e1e1;
+      //font-size: 14px;
+
+      span              { vertical-align: middle; display: block; padding: 3px 7px; }
+      span.eagle,
+      span.albatross    { border: 1px solid $green; border-radius: 500px; }
+      
+      span.birdie       { vertical-align: middle; color: #fff; background: $green; border-radius: 500px; }
+   
+      span.bogey        { background-color: $red; color: #fff; border-radius: 3px;}
+
+      span.other,
+      span.double-bogey,
+      span.triple-bogey { border: 1px solid $red; border-radius: 3px; }
+
+
+      @media (min-width: $bp-lisa) {
+        border-bottom: 1px solid #e1e1e1;
+      }
+      
+      @media (min-width: $bp-bart) {
+        text-align: center;
+        width: 40px; height: 40px; 
+      }
+    }
+    
+    td[data-type=score] {
+      border-top: 1px solid #f1f1f1; 
+    }
+    
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      font-size: .8em;
+      color: rgba(94,93,82,.75);
+      
+      @media (min-width: $bp-lisa) {
+        font-size: .9em; 
+      }
+      
+      @media (min-width: $bp-bart) {
+        // Don’t show data-title labels 
+        content: none; 
+      }
+    } 
+  }
+}
