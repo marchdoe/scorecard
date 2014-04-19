@@ -1,11 +1,11 @@
 {
-  "name": "vanilla",
-  "version": "0.0.0",
-  "description": "The starting point of every new project",
-  "author": "Jesse Shawl http://jesse.sh/awl/",
+  "name": "scorecard",
+  "version": "0.0.1",
+  "description": "experiments in golf scorecard design",
+  "author": "Doug March http://doug-march.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jshawl/vanilla.git"
+    "url": "git@github.com:marchdoe/scorecard.git"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -17,6 +17,10 @@
     "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-autoprefixer": "~0.4.2",
-    "assemble": "~0.4.37"
+    "assemble": "~0.4.37",
+    "grunt-contrib-imagemin": "~0.6.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-notify": "~0.2.20"
   }
 }
+
