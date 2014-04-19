@@ -755,6 +755,11 @@ a:focus {
   }
 }
 
+.responsive-table caption small {
+  color: #aaaaaa;
+  font-weight: normal;
+}
+
 .responsive-table caption span {
   font-size: 12px;
   font-weight: normal;
@@ -798,6 +803,16 @@ a:focus {
   margin-bottom: 0;
 }
 
+.responsive-table tbody tr.small th,
+.responsive-table tbody tr.small td {
+  font-size: 11px;
+}
+
+.responsive-table tbody tr.highlight th,
+.responsive-table tbody tr.highlight td {
+  background-color: #f1f1f1;
+}
+
 .responsive-table tbody th[scope="row"] {
   background-color: #aaaaaa;
   color: white;
@@ -827,6 +842,7 @@ a:focus {
 
 .responsive-table tbody td span.eagle,
 .responsive-table tbody td span.albatross {
+  background-color: white;
   border: 1px solid #2ecc40;
   border-radius: 500px;
 }
@@ -847,6 +863,7 @@ a:focus {
 .responsive-table tbody td span.other,
 .responsive-table tbody td span.double-bogey,
 .responsive-table tbody td span.triple-bogey {
+  background-color: white;
   border: 1px solid #ff4136;
   border-radius: 3px;
 }

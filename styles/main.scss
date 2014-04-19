@@ -9,7 +9,6 @@ $bp-bart:   48em;
 $bp-marge:  62em;
 $bp-homer:  75em;
 
-
 // Styles
 * {
  @include box-sizing(border-box);
@@ -85,11 +84,9 @@ a {
     }
     
     th {
-      // background-color: $gray;
       border: 1px solid #e1e1e1;
       font-weight: normal;
       text-align: center;
-      // color: white;
       font-size: 11px;
       
       &:first-of-type { border: none; }
@@ -152,7 +149,8 @@ a {
     @media (min-width: $bp-bart) {
       font-size: 1.2em;
     }
-
+    
+    small { color: $gray; font-weight: normal; }
     span { font-size: 12px; font-weight: normal; display: block; }
   }
 
@@ -187,12 +185,12 @@ a {
       &:last-of-type {
         margin-bottom: 0; 
       }
-      
-      // &:nth-of-type(even) {
-      //   @media (min-width: $bp-bart) {
-      //     background-color: #f1f1f1;
-      //   }
-      // }
+
+      &.small th,
+      &.small td { font-size: 11px; }
+
+      &.highlight th,
+      &.highlight td { background-color: #f1f1f1; }
     }
     
     th[scope="row"] {
@@ -212,11 +210,10 @@ a {
     td {
       text-align: center;
       border: 1px solid #e1e1e1;
-      //font-size: 14px;
 
       span              { vertical-align: middle; display: block; padding: 3px 7px; }
       span.eagle,
-      span.albatross    { border: 1px solid $green; border-radius: 500px; }
+      span.albatross    { background-color: white; border: 1px solid $green; border-radius: 500px; }
       
       span.birdie       { vertical-align: middle; color: #fff; background: $green; border-radius: 500px; }
    
@@ -224,7 +221,7 @@ a {
 
       span.other,
       span.double-bogey,
-      span.triple-bogey { border: 1px solid $red; border-radius: 3px; }
+      span.triple-bogey { background-color: white; border: 1px solid $red; border-radius: 3px; }
 
 
       @media (min-width: $bp-lisa) {
