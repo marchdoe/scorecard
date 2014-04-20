@@ -1,50 +1,9 @@
-@import 'bourbon/bourbon';
-@import 'normalize';
-@import 'colors';
-
-// Breakpoints
-$bp-maggie: 15em; 
-$bp-lisa:   30em;
-$bp-bart:   48em;
-$bp-marge:  62em;
-$bp-homer:  75em;
-
-// Styles
-* {
- @include box-sizing(border-box);
- 
- &:before,
- &:after {
-   @include box-sizing(border-box);
- }
-}
-
-body {
-  font-family: $helvetica;
-  color: rgba(94,93,82,1);
-}
-
-a {
-  color: rgba(51,122,168,1);
-  
-  &:hover,
-  &:focus {
-    color: rgba(75,138,178,1); 
-  }
-}
-
-.container {
-  margin: 5% 3%;
-  
-  @media (min-width: $bp-bart) {
-    margin: 2%; 
-  }
-  
-  @media (min-width: $bp-homer) {
-    margin: 2em auto;
-    max-width: $bp-homer;
-  }
-}
+@import 'lib/bourbon/bourbon';
+@import 'lib/normalize';
+@import 'lib/colors';
+@import 'settings';
+@import 'base';
+@import 'scorecard';
 
 .responsive-table {
   width: 100%;
@@ -55,11 +14,11 @@ a {
 
   .total { font-size: 22px; font-weight: bold; }
   
-  @media (min-width: $bp-bart) {
+  @media (min-width: $bp-large) {
     font-size: .9em; 
   }
   
-  @media (min-width: $bp-marge) {
+  @media (min-width: $bp-xl) {
     font-size: 1em; 
   }
   
@@ -74,7 +33,7 @@ a {
     width: 1px; 
     overflow: hidden;
     
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-large) {
       // Unhide <thead> on wide viewports
       position: relative;
       clip: auto;
@@ -110,7 +69,7 @@ a {
   }
   
   tr {   
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-large) {
       // Undo display: block 
       display: table-row; 
     }
@@ -121,21 +80,21 @@ a {
     padding: .5em;
     vertical-align: middle;
     
-    @media (min-width: $bp-lisa) {
+    @media (min-width: $bp-medium) {
       padding: .75em .5em; 
     }
     
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-large) {
       // Undo display: block 
       display: table-cell;
       padding: .4em;
     }
     
-    @media (min-width: $bp-marge) {
+    @media (min-width: $bp-xl) {
       // padding: .75em .5em; 
     }
     
-    @media (min-width: $bp-homer) {
+    @media (min-width: $bp-xxl) {
       // padding: .75em; 
     }
   }
@@ -146,7 +105,7 @@ a {
     font-weight: bold;
     text-align: left;
     
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-large) {
       font-size: 1.2em;
     }
     
@@ -161,13 +120,13 @@ a {
   tfoot {
     font-size: .8em;
     
-    @media (min-width: $bp-marge) {
+    @media (min-width: $bp-xl) {
       font-size: .9em;
     }
   }
   
   tbody {
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-large) {
       // Undo display: block 
       display: table-row-group; 
     }
@@ -176,7 +135,7 @@ a {
       margin-bottom: 1em;
       border: 1px solid $silver;
       
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-large) {
         // Undo display: block 
         display: table-row;
         border-width: 1px;
@@ -197,7 +156,7 @@ a {
       background-color: $gray;
       color: white;
       
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-large) {
         background-color: transparent;
         color: rgba(94,93,82,1);
         text-align: center;
@@ -224,11 +183,11 @@ a {
       span.triple-bogey { background-color: white; border: 1px solid $red; border-radius: 3px; }
 
 
-      @media (min-width: $bp-lisa) {
+      @media (min-width: $bp-medium) {
         border-bottom: 1px solid #e1e1e1;
       }
       
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-large) {
         text-align: center;
         width: 40px; height: 40px; 
       }
@@ -237,18 +196,18 @@ a {
     td[data-type=score] {
       border-top: 1px solid #f1f1f1; 
     }
-    
+
     td[data-title]:before {
       content: attr(data-title);
       float: left;
       font-size: .8em;
       color: rgba(94,93,82,.75);
       
-      @media (min-width: $bp-lisa) {
+      @media (min-width: $bp-medium) {
         font-size: .9em; 
       }
       
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-large) {
         // Don’t show data-title labels 
         content: none; 
       }

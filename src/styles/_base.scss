@@ -1,0 +1,67 @@
+* {
+ @include box-sizing(border-box);
+ 
+ &:before,
+ &:after {
+   @include box-sizing(border-box);
+ }
+}
+
+body {
+  font-family: $helvetica;
+  color: rgba(94,93,82,1);
+}
+
+.container {
+  margin: 5% 3%;
+  
+  @media (min-width: $bp-large) {
+    margin: 2%; 
+  }
+  
+  @media (min-width: $bp-xxl) {
+    margin: 2em auto;
+    max-width: $bp-xxl;
+  }
+}
+
+header { 
+  margin-top: 100px; 
+  margin-bottom: 100px; 
+  text-align: center;
+  
+  h1 { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 70px; 
+    text-transform: uppercase; 
+  }
+  
+  p { 
+    margin: 0 0 20px; 
+    padding: 0; 
+  }
+}
+
+nav ul { 
+  margin: 0; 
+  padding: 0;
+  
+  li { 
+    list-style: none; 
+    display: inline-block; 
+    padding: 10px; 
+    margin: 5px; 
+  }
+  
+  a  { text-decoration: none; }
+}
+
+section h2 { 
+  border-bottom: 5px solid $green;
+  margin-bottom: 60px; 
+  padding: 4px 8px; 
+}
+
+
+

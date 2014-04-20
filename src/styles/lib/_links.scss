@@ -5,7 +5,8 @@ a {
 }
 
 a:link    { color: $blue; }
-a:visited { color: $purple; }
+// a:visited { color: $purple; } setting visited to default
+a:visited { color: $blue; }
 a:hover   { color: $aqua; }
 a:active  { color: $orange; }
 
