@@ -535,7 +535,7 @@ a:link {
 }
 
 a:visited {
-  color: #b10dc9;
+  color: #0074d9;
 }
 
 a:hover {
@@ -562,13 +562,6 @@ body {
   color: #5e5d52;
 }
 
-a {
-  color: #337aa8;
-}
-a:hover, a:focus {
-  color: #4b8ab2;
-}
-
 .container {
   margin: 5% 3%;
 }
@@ -582,6 +575,42 @@ a:hover, a:focus {
     margin: 2em auto;
     max-width: 75em;
   }
+}
+
+header {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 70px;
+  text-transform: uppercase;
+}
+header p {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
+nav ul a {
+  text-decoration: none;
+}
+
+section h2 {
+  border-bottom: 5px solid #2ecc40;
+  margin-bottom: 60px;
+  padding: 4px 8px;
 }
 
 .responsive-table {
