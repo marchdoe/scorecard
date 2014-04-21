@@ -31,13 +31,16 @@ header {
   text-align: center;
   
   h1 { 
+    font-family: $title;
     margin: 0; 
     padding: 0; 
     font-size: 70px; 
     text-transform: uppercase; 
+    letter-spacing: -1px;
   }
   
   p { 
+    font-family: $title;
     margin: 0 0 20px; 
     padding: 0; 
   }

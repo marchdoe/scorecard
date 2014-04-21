@@ -170,18 +170,39 @@
       text-align: center;
       border: 1px solid #e1e1e1;
 
-      span              { vertical-align: middle; display: block; padding: 3px 7px; }
-      span.eagle,
-      span.albatross    { background-color: white; border: 1px solid $green; border-radius: 500px; }
+      span { 
+        vertical-align: middle; 
+        display: block; 
+        padding: 3px 7px;
       
-      span.birdie       { vertical-align: middle; color: #fff; background: $green; border-radius: 500px; }
-   
-      span.bogey        { background-color: $red; color: #fff; border-radius: 3px;}
+        &.eagle,
+        &.albatross { 
+          background-color: white; 
+          border: 1px solid $green; 
+          border-radius: 500px; 
+        }
+        
+        &.birdie { 
+          vertical-align: middle; 
+          color: #fff; 
+          background: $green; 
+          border-radius: 500px; 
+        }
+     
+        &.bogey { 
+          background-color: $red; 
+          color: #fff; 
+          border-radius: 3px;
+        }
 
-      span.other,
-      span.double-bogey,
-      span.triple-bogey { background-color: white; border: 1px solid $red; border-radius: 3px; }
-
+        &.other,
+        &.double-bogey,
+        &.triple-bogey { 
+          background-color: white; 
+          border: 1px solid $red; 
+          border-radius: 3px; 
+        }
+      }
 
       @media (min-width: $bp-medium) {
         border-bottom: 1px solid #e1e1e1;

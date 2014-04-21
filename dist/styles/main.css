@@ -583,12 +583,15 @@ header {
   text-align: center;
 }
 header h1 {
+  font-family: "Lato bold", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 70px;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 header p {
+  font-family: "Lato", sans-serif;
   margin: 0 0 20px;
   padding: 0;
 }
@@ -779,8 +782,7 @@ section h2 {
   display: block;
   padding: 3px 7px;
 }
-.responsive-table tbody td span.eagle,
-.responsive-table tbody td span.albatross {
+.responsive-table tbody td span.eagle, .responsive-table tbody td span.albatross {
   background-color: white;
   border: 1px solid #2ecc40;
   border-radius: 500px;
@@ -796,9 +798,7 @@ section h2 {
   color: #fff;
   border-radius: 3px;
 }
-.responsive-table tbody td span.other,
-.responsive-table tbody td span.double-bogey,
-.responsive-table tbody td span.triple-bogey {
+.responsive-table tbody td span.other, .responsive-table tbody td span.double-bogey, .responsive-table tbody td span.triple-bogey {
   background-color: white;
   border: 1px solid #ff4136;
   border-radius: 3px;
