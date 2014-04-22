@@ -583,7 +583,7 @@ header {
   text-align: center;
 }
 header h1 {
-  font-family: "Lato bold", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 70px;
@@ -603,10 +603,10 @@ nav ul {
 nav ul li {
   list-style: none;
   display: inline-block;
-  padding: 10px;
   margin: 5px;
 }
 nav ul a {
+  padding: 5px 15px;
   text-decoration: none;
 }
 
