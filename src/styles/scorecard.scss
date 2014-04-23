@@ -93,13 +93,15 @@
   }
   
   caption {
-    margin-bottom: -14px;
+    margin-bottom: 10px;
+    margin-left: 10px;
     font-size: 1em;
     font-weight: bold;
     text-align: left;
-    
+
     @media (min-width: $bp-large) {
       font-size: 1.2em;
+      margin-bottom: -14px;
     }
     
     small { color: $gray; font-weight: normal; }
@@ -128,10 +130,16 @@
       margin-bottom: 1em;
       border: 1px solid $silver;
       
+      @media (min-width: $bp-small) { 
+        width: 25%;
+        float: left;
+      }
+
       @media (min-width: $bp-large) {
         // Undo display: block 
         display: table-row;
         border-width: 1px;
+        float: none;
       }
       
       &:last-of-type {
@@ -145,6 +153,13 @@
       &.highlight td { background-color: #f1f1f1; }
     }
     
+    th {
+
+      @media (min-width: $bp-small) { 
+        height: 50px;
+      }
+    }
+
     th[scope="row"] {
       background-color: $gray;
       color: white;
@@ -161,7 +176,19 @@
     
     td {
       text-align: center;
-      border: 1px solid #e1e1e1;
+
+      @media (min-width: $bp-small) { 
+        height: 35px;
+        border: none;
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+      }
+
+      @media (min-width: $bp-medium) { 
+        border: 1px solid #e1e1e1;
+      }
+
+      
 
       span { 
         vertical-align: middle; 

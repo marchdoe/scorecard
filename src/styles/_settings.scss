@@ -5,19 +5,6 @@ $bp-large:  48em;
 $bp-xl:     62em;
 $bp-xxl:    75em;
 
-// Base font size in used in _mixins.scss
-$base-font-size: 16;
-
-// Breakpoints
-$small: 35em;
-// $medium: ;
-// $big: ;
-
 // Fonts
 $title: 'Lato', sans-serif;
 $body: 'Source Sans Pro', sans-serif;
-
-// Color
-$grey: darken(#f5f5f5, 6%);
-
-$primary-color: $grey;

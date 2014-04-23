@@ -704,7 +704,8 @@ section h2 {
   }
 }
 .responsive-table caption {
-  margin-bottom: -14px;
+  margin-bottom: 10px;
+  margin-left: 10px;
   font-size: 1em;
   font-weight: bold;
   text-align: left;
@@ -712,6 +713,7 @@ section h2 {
 @media (min-width: 48em) {
   .responsive-table caption {
     font-size: 1.2em;
+    margin-bottom: -14px;
   }
 }
 .responsive-table caption small {
@@ -744,10 +746,17 @@ section h2 {
   margin-bottom: 1em;
   border: 1px solid #dddddd;
 }
+@media (min-width: 15em) {
+  .responsive-table tbody tr {
+    width: 25%;
+    float: left;
+  }
+}
 @media (min-width: 48em) {
   .responsive-table tbody tr {
     display: table-row;
     border-width: 1px;
+    float: none;
   }
 }
 .responsive-table tbody tr:last-of-type {
@@ -758,6 +767,11 @@ section h2 {
 }
 .responsive-table tbody tr.highlight th, .responsive-table tbody tr.highlight td {
   background-color: #f1f1f1;
+}
+@media (min-width: 15em) {
+  .responsive-table tbody th {
+    height: 50px;
+  }
 }
 .responsive-table tbody th[scope="row"] {
   background-color: #aaaaaa;
@@ -775,7 +789,19 @@ section h2 {
 }
 .responsive-table tbody td {
   text-align: center;
-  border: 1px solid #e1e1e1;
+}
+@media (min-width: 15em) {
+  .responsive-table tbody td {
+    height: 35px;
+    border: none;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+@media (min-width: 30em) {
+  .responsive-table tbody td {
+    border: 1px solid #e1e1e1;
+  }
 }
 .responsive-table tbody td span {
   vertical-align: middle;
