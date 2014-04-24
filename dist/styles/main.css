@@ -616,6 +616,21 @@ section h2 {
   padding: 4px 8px;
 }
 
+.profile {
+  background: #7fdbff;
+  height: 500px;
+  padding: 10px;
+}
+.profile h1 {
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.profile h1 small {
+  font-size: 50px;
+}
+
 .responsive-table {
   width: 100%;
   margin-bottom: 5em;
@@ -762,9 +777,6 @@ section h2 {
 .responsive-table tbody tr:last-of-type {
   margin-bottom: 0;
 }
-.responsive-table tbody tr.small th, .responsive-table tbody tr.small td {
-  font-size: 11px;
-}
 .responsive-table tbody tr.highlight th, .responsive-table tbody tr.highlight td {
   background-color: #f1f1f1;
 }
@@ -808,7 +820,7 @@ section h2 {
   display: block;
   padding: 3px 7px;
 }
-.responsive-table tbody td span.eagle, .responsive-table tbody td span.albatross {
+.responsive-table tbody td span.eagle, .responsive-table tbody td span.albatross, .responsive-table tbody td span.condor {
   background-color: white;
   border: 1px solid #2ecc40;
   border-radius: 500px;
