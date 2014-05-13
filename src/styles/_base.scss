@@ -12,22 +12,27 @@ body {
   color: rgba(94,93,82,1);
 }
 
+// .container {
+//   margin: 5% 3%;
+  
+//   @media (min-width: $bp-large) {
+//     margin: 2%; 
+//   }
+  
+//   @media (min-width: $bp-xxl) {
+//     margin: 2em auto;
+//     max-width: $bp-xxl;
+//   }
+// }
+
 .container {
-  margin: 5% 3%;
-  
-  @media (min-width: $bp-large) {
-    margin: 2%; 
-  }
-  
-  @media (min-width: $bp-xxl) {
-    margin: 2em auto;
-    max-width: $bp-xxl;
-  }
+  @include outer-container;
 }
 
+
 header { 
-  margin-top: 100px; 
-  margin-bottom: 100px; 
+  // margin-top: 100px; 
+  // margin-bottom: 100px; 
   text-align: center;
   
   h1 { 
@@ -63,7 +68,7 @@ nav ul {
 }
 
 section h2 { 
-  border-bottom: 5px solid $green;
+  border-bottom: 5px solid $olive;
   margin-bottom: 60px; 
   padding: 4px 8px; 
 }
