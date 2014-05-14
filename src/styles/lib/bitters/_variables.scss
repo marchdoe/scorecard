@@ -23,6 +23,33 @@ $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 
+// Cool
+
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+// Warm
+
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+// Gray Scale
+
+$white:  #fff;
+$silver: #ddd;
+$gray:   #aaa;
+$black:  #111;
+
+
 // Body Color
 $base-body-color: white;
 
@@ -33,6 +60,19 @@ $base-accent-color: $blue;
 //  Text Link Colors
 $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
+
+
+// /* Prettier Links */
+
+// a {
+//   transition:         color .3s ease-in-out;
+// }
+
+// a:link    { color: $blue; }
+// // a:visited { color: $purple; } setting visited to default
+// a:visited { color: $blue; }
+// a:hover   { color: $aqua; }
+// a:active  { color: $orange; }
 
 // Border color
 $base-border-color: $light-gray;
