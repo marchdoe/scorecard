@@ -1,7 +1,7 @@
 body {
   font-family: $helvetica;
   color: rgba(94,93,82,1);
-  background-color: #fff;
+  background-color: $white;
 }
 
 .container {
@@ -198,7 +198,7 @@ section h2 {
 
     th[scope="row"] {
       background-color: $gray;
-      color: white;
+      color: $white;
       
       @media (min-width: $bp-large) {
         background-color: transparent;
@@ -239,14 +239,14 @@ section h2 {
         
         &.birdie { 
           vertical-align: middle; 
-          color: #fff; 
+          color: $white; 
           background: $green; 
           border-radius: 500px; 
         }
      
         &.bogey { 
           background-color: $red; 
-          color: #fff; 
+          color: $white; 
           border-radius: 3px;
         }
 

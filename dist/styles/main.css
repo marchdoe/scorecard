@@ -2028,7 +2028,7 @@ header.navigation a.sign-up:hover {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #5e5d52;
-  background-color: #fff;
+  background-color: white;
 }
 
 .container {
@@ -2263,13 +2263,13 @@ section h2 {
 }
 .responsive-table tbody td span.birdie {
   vertical-align: middle;
-  color: #fff;
+  color: white;
   background: #2ecc40;
   border-radius: 500px;
 }
 .responsive-table tbody td span.bogey {
   background-color: #ff4136;
-  color: #fff;
+  color: white;
   border-radius: 3px;
 }
 .responsive-table tbody td span.other, .responsive-table tbody td span.double-bogey, .responsive-table tbody td span.triple-bogey {
