@@ -215,20 +215,23 @@ header.navigation {
 
 
 
-.footer-2 {
+
+.footer {
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
   $footer-background: #fff;
-  $footer-color: #999;
+  $footer-color: #000;
   $footer-link-color: transparentize($footer-color, .6);
   $footer-disclaimer-color: transparentize($footer-color, .6);
 
   background: $footer-background;
-  padding: $base-line-height;
-  border-top: 1px solid #e1e1e1;
+  // padding: $base-line-height;
+  padding: 20px 10px;
   width: 100%;
+  border-top: 1px solid transparentize($base-font-color, .8);
 
   .footer-logo {
-    margin-right: 1em;
     margin-bottom: 1em;
+    text-align: center;
 
     @include media($large-screen) {
       float: left;
@@ -241,9 +244,10 @@ header.navigation {
   } 
 
   ul {
+    padding-top: .2em;
     margin-bottom: 1em;
+    float: left;
     @include media($large-screen) {
-      float: left;
       margin-left: 1em;
       margin-bottom: 0;
     }
@@ -268,13 +272,15 @@ header.navigation {
   }
 
   .footer-secondary-links {
-    @include media($large-screen) {
+
       float: right;
-    }
+    
+    ul { margin-left: 1.5em; }
 
     li {
       font-size: .8em;
       font-weight: 400;
+      text-align: center;
     }
 
     ul.footer-social {
@@ -293,15 +299,10 @@ header.navigation {
         &:last-child {
           padding-right: 0;
         }
-      }
 
-      img {
-        opacity: .7;
-        height: 1.6em;
-        padding: 1px;
-
-        &:hover {
-          opacity: 1;
+        a { 
+          font-weight: bold; 
+          font-size: 24px;
         }
       }
     }
