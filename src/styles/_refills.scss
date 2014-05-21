@@ -19,6 +19,11 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
+  // fix the header to the top of the page
+  position: fixed; 
+  top: 0;
+  z-index: 1000; 
+
   .menu-wrapper {
     @include outer-container;
     @include clearfix;

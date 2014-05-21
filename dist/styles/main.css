@@ -1739,6 +1739,9 @@ header.navigation {
   height: 60px;
   width: 100%;
   z-index: 999;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 header.navigation .menu-wrapper {
   *zoom: 1;
