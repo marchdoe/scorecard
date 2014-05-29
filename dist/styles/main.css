@@ -1954,6 +1954,7 @@ header.navigation a.sign-up:hover {
   padding: 20px 10px;
   width: 100%;
   border-top: 1px solid rgba(51, 51, 51, 0.2);
+  margin-top: 300px;
 }
 .footer .footer-logo {
   margin-bottom: 1em;

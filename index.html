@@ -11,13 +11,16 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="dist/styles/main.css">
   <link rel="icon" href="favicon.ico">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="dist/scripts/main.js"></script>
 </head>
 
 <body>
 
 <a href="https://github.com/marchdoe/scorecard"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1100;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
 
-<header class="navigation">
+<header class="navigation" data-scroll-header>
   <div class="menu-wrapper">
     <a href="http://teeturn.com" class="logo">
       <img src="dist/images/teeturn-logo.png" alt="">
@@ -25,10 +28,10 @@
     <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
     <div class="nav">
       <ul id="navigation-menu">
-        <li class="nav-link"><a href="#">basic</a></li>
-        <li class="nav-link"><a href="#">minimal</a></li>
-        <li class="nav-link"><a href="#">with stats</a></li>
-        <li class="nav-link"><a href="#">leaderboard</a></li>    
+        <li class="nav-link"><a data-scroll href="#basic">basic</a></li>
+        <li class="nav-link"><a data-scroll href="#minimal">minimal</a></li>
+        <li class="nav-link"><a data-scroll href="#withstats">with stats</a></li>
+        <li class="nav-link"><a data-scroll href="#leaderboard">leaderboard</a></li>    
       </ul>
     </div>
   </div>
@@ -41,6 +44,7 @@
     <p>experiments in golf scorecards</p>
   </header>
 
+  <span id="basic"></span>
   <section>
     <h2>Basic</h2>
     <table class="responsive-table scorecard">
@@ -233,6 +237,8 @@
   </section>
 
   <!-- SINGLE PLAYER VIEW MINIMAL -->
+  
+  <span id="minimal"></span>
   <section>
     <h2>Minimal</h2>
     <table class="responsive-table scorecard">
@@ -369,6 +375,7 @@
   </section>
 
   <!-- SINGLE PLAYER VIEW WITH STATS -->
+  <span id="withstats"></span>
   <section>
     <h2>With Stats</h2>
     <table class="responsive-table scorecard with-stats">
@@ -628,7 +635,6 @@
           <td>35</td>
         </tr>
 
-
         <tr class="small">
           <th data-type="player">Penalty</th>
           <td>&nbsp;</td>
@@ -661,6 +667,7 @@
         
 
   <!-- LEADERBOARD -->
+  <span id="leaderboard"></span>
   <section>
     <h2>Leaderboard</h2>
     <table class="responsive-table leaderboard">
@@ -876,35 +883,8 @@
     </div>
   </footer>
 
-
-
-  <script src="src/scripts/jquery.js"></script>
-
   <script>
-    $(function() {
-      var menu = $('#navigation-menu');
-      var menuToggle = $('#js-mobile-menu');
-      var signUp = $('.sign-up');
-
-      $(menuToggle).on('click', function(e) {
-        e.preventDefault();
-        menu.slideToggle(function(){
-          if(menu.is(':hidden')) {
-            menu.removeAttr('style');
-          }
-        });
-      });
-
-     
-   // underline under the active nav item
-      $(".nav .nav-link").click(function() {
-        $(".nav .nav-link").each(function() {
-          $(this).removeClass("active-nav-item");
-        });
-        $(this).addClass("active-nav-item"); 
-        $(".nav .more").removeClass("active-nav-item");
-      });
-    });
+    smoothScroll.init();
   </script>
 
   <script src="http://127.0.0.1:35729/livereload.js?ext=Chrome&amp;extver=2.0.9"></script>
