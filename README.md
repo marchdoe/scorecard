@@ -3,6 +3,8 @@ Scorecard
 
 Experiments in golf scorecards
 
+## Demo
+marchdoe.github.io/scorecard
 
 ## To get up and running locally
 
