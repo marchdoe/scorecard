@@ -1,0 +1,292 @@
+body {
+  font-family: $helvetica;
+  color: rgba(94, 93, 82, 1);
+  background-color: $white;
+}
+
+.container {
+  @include outer-container;
+}
+
+
+header { 
+
+  text-align: center;
+  
+  h1 { 
+    font-family: $title;
+    margin: 100px 0 0;
+    padding: 0; 
+    font-size: 70px; 
+    text-transform: uppercase; 
+    letter-spacing: -1px;
+  }
+  
+  p { 
+    font-family: $title;
+    margin: 0 0 20px; 
+    padding: 0; 
+  }
+}
+
+section h2 { 
+  border-bottom: 5px solid $olive;
+  margin-bottom: 60px; 
+  padding: 4px 8px; 
+}
+
+.responsive-table {
+  width: 100%;
+  margin-bottom: 5em;
+
+  .out,
+  .in { background-color: #f1f1f1; }
+
+  .total { font-size: 22px; font-weight: bold; }
+  
+  @media (min-width: $bp-large) {
+    font-size: 0.9em; 
+  }
+  
+  @media (min-width: $bp-xl) {
+    font-size: 1em; 
+  }
+  
+  thead {
+    // Accessibly hide <thead> on narrow viewports
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
+    
+    @media (min-width: $bp-large) {
+      // Unhide <thead> on wide viewports
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+    
+    th {
+      border: 1px solid #e1e1e1;
+      font-weight: normal;
+      text-align: center;
+      font-size: 11px;
+      
+      &:first-of-type { border: 0; }
+      
+      &.player {
+        border: 0;
+      }
+    }
+  }
+  
+  // Set these items to display: block for narrow viewports
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+    font-weight: normal;
+  }
+  
+  tr {   
+    @media (min-width: $bp-large) {
+      // Undo display: block 
+      display: table-row; 
+    }
+  }
+  
+  th,
+  td {
+    padding: 0.5em;
+    vertical-align: middle;
+    
+    @media (min-width: $bp-medium) {
+      padding: 0.75em 0.5em; 
+    }
+    
+    @media (min-width: $bp-large) {
+      // Undo display: block 
+      display: table-cell;
+      padding: 0.4em;
+    }
+    
+    @media (min-width: $bp-xl) {
+      // padding: .75em .5em; 
+    }
+    
+    @media (min-width: $bp-xxl) {
+      // padding: .75em; 
+    }
+  }
+  
+  caption {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+
+    @media (min-width: $bp-large) {
+      margin-bottom: -30px;
+      text-align: left;
+    }
+    
+    small { color: $gray; font-weight: normal; }
+    span { font-size: 12px; font-weight: normal; display: block; }
+  }
+
+  &.leaderboard caption { 
+    margin-bottom: -60px;
+    margin-left: 5px; }
+  
+  tfoot {
+    font-size: 0.8em;
+    
+    @media (min-width: $bp-xl) {
+      font-size: 0.9em;
+    }
+  }
+  
+  tbody {
+    @media (min-width: $bp-large) {
+      // Undo display: block 
+      display: table-row-group; 
+    }
+    
+    tr {
+      margin-bottom: 1em;
+      border: 1px solid $silver;
+      
+      @media (min-width: $bp-small) { 
+        width: 25%;
+        float: left;
+      }
+
+      @media (min-width: $bp-large) {
+        // Undo display: block 
+        display: table-row;
+        border-width: 1px;
+        float: none;
+      }
+      
+      &:last-of-type {
+        margin-bottom: 0; 
+      }
+
+      // &.small th,
+      // &.small td { font-size: 11px; }
+
+      &.highlight th,
+      &.highlight td { background-color: #f1f1f1; }
+    }
+    
+    th {
+
+      @media (min-width: $bp-small) { 
+        height: 50px;
+      }
+    }
+
+    th[scope="row"] {
+      background-color: $gray;
+      color: $white;
+      
+      @media (min-width: $bp-large) {
+        background-color: transparent;
+        color: rgba(94, 93, 82, 1);
+        text-align: center;
+        font-size: 12px;
+        border-right: 1px solid #e1e1e1;
+        padding: 0;
+      }
+    }
+    
+    td {
+      text-align: center;
+
+      @media (min-width: $bp-small) { 
+        height: 35px;
+        border: 0;
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+      }
+
+      @media (min-width: $bp-medium) { 
+        border: 1px solid #e1e1e1;
+      }
+
+      span { 
+        vertical-align: middle; 
+        display: block; 
+        padding: 3px 7px;
+      
+        &.eagle,
+        &.albatross,
+        &.condor { 
+          background-color: $white; 
+          border: 1px solid $green; 
+          border-radius: 500px; 
+        }
+        
+        &.birdie { 
+          vertical-align: middle; 
+          color: $white; 
+          background: $green; 
+          border-radius: 500px; 
+        }
+     
+        &.bogey { 
+          background-color: $red; 
+          color: $white; 
+          border-radius: 3px;
+        }
+
+        &.other,
+        &.double-bogey,
+        &.triple-bogey { 
+          background-color: $white; 
+          border: 1px solid $red; 
+          border-radius: 3px; 
+        }
+      }
+
+      @media (min-width: $bp-medium) {
+        border-bottom: 1px solid #e1e1e1;
+      }
+      
+      @media (min-width: $bp-large) {
+        text-align: center;
+        width: 40px; height: 40px; 
+      }
+    }
+    
+    td[data-type=score] {
+      border-top: 1px solid #f1f1f1; 
+    }
+
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      font-size: 0.8em;
+      color: rgba(94, 93, 82, 0.75);
+      
+      @media (min-width: $bp-medium) {
+        font-size: 0.9em; 
+      }
+      
+      @media (min-width: $bp-large) {
+        // Don’t show data-title labels 
+        content: none; 
+      }
+    } 
+  }
+}
+

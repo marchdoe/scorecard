@@ -7,20 +7,39 @@
     "type": "git",
     "url": "git@github.com:marchdoe/scorecard.git"
   },
+  "dependencies": {
+    "gulp": "^3.8.11"
+  },
   "devDependencies": {
-    "gulp-rename": "~1.2.0",
-    "tiny-lr": "0.0.5",
-    "gulp-minify-css": "~0.3.1",
-    "gulp-notify": "~1.2.5",
-    "gulp-autoprefixer": "0.0.7",
-    "gulp-ruby-sass": "~0.4.3",
-    "gulp-uglify": "~0.2.1",
-    "gulp-jshint": "~1.5.3",
-    "gulp-clean": "~0.2.4",
-    "gulp-cache": "~0.1.3",
-    "gulp-concat": "~2.2.0",
-    "gulp-livereload": "~1.3.1",
-    "gulp-imagemin": "~0.2.0",
-    "gulp-build": "~0.5.3"
+    "del": "^1.1.1",
+    "gulp-awspublish": "^1.0.6",
+    "gulp-concat": "^2.5.2",
+    "gulp-csslint": "^0.1.5",
+    "gulp-debug": "^2.0.1",
+    "gulp-hologram": "^1.2.0",
+    "gulp-html-tag-include": "^1.0.1",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-css": "^0.5.1",
+    "gulp-parker": "^0.1.2",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-rev": "^3.0.1",
+    "gulp-rev-css-url": "0.0.11",
+    "gulp-sass": "^1.3.3",
+    "gulp-scss-lint": "^0.2.1",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-util": "^3.0.4",
+    "gulp-webserver": "^0.9.0",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2",
+    "node-refills": "^1.0.1",
+    "node-sass": "2.1.1",
+    "parker": "0.0.8",
+    "require-dir": "^0.1.0"
+  },
+  "scripts": {
+    "start": "gulp"
   }
 }
